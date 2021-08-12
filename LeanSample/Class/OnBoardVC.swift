@@ -9,11 +9,13 @@ import UIKit
 import LeanSDK
 
 class OnBoardVC: UIViewController {
-    var linkPermissions = [LeanPermission.Identity]
+    var linkPermissions = [LeanPermission.Identity, LeanPermission.Accounts,
+                           LeanPermission.Transactions, LeanPermission.Balance]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Lean.manager.setup(appToken: "da9b810f-338a-41ae-ac80-445478e6158a", sandbox: true, version: "1.0.4")
+        Lean.manager.setup(appToken: "da9b810f-338a-41ae-ac80-445478e6158a", sandbox: true, version: "1.11.1")
        
     }
     
@@ -21,7 +23,7 @@ class OnBoardVC: UIViewController {
     @IBAction func createPayment(_ sender: UIButton) {
         Lean.manager.createPaymentSource(
             presentingViewController: self,
-            customerId: "6aa4e4dd-f622-42af-9304-8f2d9ad5300e",
+            customerId: "2c519ec8-5dda-4ded-a0dd-79fc6faebd00",
             bankId: "LEANMB2_SAU",
             success: {
                 print("Create Lean Success")
@@ -38,9 +40,9 @@ class OnBoardVC: UIViewController {
     @IBAction func LinkLean(_ sender: UIButton) {
         Lean.manager.link(
             presentingViewController: self,
-            customerId: "6aa4e4dd-f622-42af-9304-8f2d9ad5300e",
+            customerId: "2c519ec8-5dda-4ded-a0dd-79fc6faebd00",
             permissions: linkPermissions,
-            bankId: "LEANMB2_SAU",
+            bankId: nil,
             success: {
                 print("Link Lean Success")
             },
