@@ -1,0 +1,12 @@
+stages:
+    - build
+
+build_project:
+ stage: build
+ script:
+    - xcodebuild clean -project ~/Users/vishnuchari/Projects/lean_demo/LeanSample.xcodeproj  -scheme LeanSample | xcpretty
+    - bundle exec fastlane custom_lane
+ tags:
+    - build, testflight
+ only:
+    - main
