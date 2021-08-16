@@ -1,16 +1,20 @@
 PODS:
-  - Alamofire (5.4.3)
+  - AnimatedGradientView (3.1.0)
+  - lottie-ios (3.2.3)
 
 DEPENDENCIES:
-  - Alamofire
+  - AnimatedGradientView
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
-    - Alamofire
+    - AnimatedGradientView
+    - lottie-ios
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AnimatedGradientView: f249740238c6b491a10d505ab06bb98d897ca3a7
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
 
-PODFILE CHECKSUM: 951195caed01d5d655016f594795a02ddb8b988a
+PODFILE CHECKSUM: 8bf9d7deec64e547455f752805643728dbba8bd9
 
 COCOAPODS: 1.10.1

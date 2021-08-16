@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3BB8EAC03549BB588AB8BEDA /* Pods_LeanSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A3FF529B3E4E59ADA9EB6A /* Pods_LeanSampleTests.framework */; };
 		938E24D2542611AD70F3E2B7 /* Pods_LeanSample_LeanSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F2514AD93468A502AE89C1 /* Pods_LeanSample_LeanSampleUITests.framework */; };
+		9D2D79EA26C6923B00B17DC1 /* LeanSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2D79E926C6923B00B17DC1 /* LeanSDK.xcframework */; };
+		9D75851526CA75F60095BF3F /* bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D75851426CA75F60095BF3F /* bg.json */; };
+		9D75851726CA764F0095BF3F /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75851626CA764F0095BF3F /* SplashVC.swift */; };
+		9D75851926CA89530095BF3F /* Lean.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D75851826CA89520095BF3F /* Lean.png */; };
+		9D75851B26CA96730095BF3F /* lulu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D75851A26CA96730095BF3F /* lulu.png */; };
 		AC7DBC2AFB0444B889ABD121 /* Pods_LeanSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92802B2303C65FCF0EAE2553 /* Pods_LeanSample.framework */; };
 		CA4C8B8D26BBA1E300FA8950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B8C26BBA1E300FA8950 /* AppDelegate.swift */; };
 		CA4C8B9426BBA1E300FA8950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4C8B9226BBA1E300FA8950 /* Main.storyboard */; };
@@ -17,11 +22,8 @@
 		CA4C8B9C26BBA1EC00FA8950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4C8B9A26BBA1EC00FA8950 /* LaunchScreen.storyboard */; };
 		CA4C8BA726BBA1ED00FA8950 /* LeanSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BA626BBA1ED00FA8950 /* LeanSampleTests.swift */; };
 		CA4C8BB226BBA1ED00FA8950 /* LeanSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BB126BBA1ED00FA8950 /* LeanSampleUITests.swift */; };
-		CA4C8BC426BBFD2B00FA8950 /* LeanSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CA4C8BC326BBFD2B00FA8950 /* LeanSDK */; };
 		CA65418A26BCF99100D0912A /* OnBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65418926BCF99100D0912A /* OnBoardVC.swift */; };
 		CA65418C26BCFD0700D0912A /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65418B26BCFD0700D0912A /* Extentions.swift */; };
-		CA77AAA826C0FB7400A164A4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77AAA726C0FB7400A164A4 /* APIClient.swift */; };
-		CA77AAAA26C0FC1300A164A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77AAA926C0FC1300A164A4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,11 @@
 		6F5F49C66AC2E74257B4016E /* Pods-LeanSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanSampleTests.release.xcconfig"; path = "Target Support Files/Pods-LeanSampleTests/Pods-LeanSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		92802B2303C65FCF0EAE2553 /* Pods_LeanSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA979C2F258E25C6AEDE7BC /* Pods-LeanSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanSample.release.xcconfig"; path = "Target Support Files/Pods-LeanSample/Pods-LeanSample.release.xcconfig"; sourceTree = "<group>"; };
+		9D2D79E926C6923B00B17DC1 /* LeanSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LeanSDK.xcframework; sourceTree = "<group>"; };
+		9D75851426CA75F60095BF3F /* bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bg.json; sourceTree = "<group>"; };
+		9D75851626CA764F0095BF3F /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		9D75851826CA89520095BF3F /* Lean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lean.png; sourceTree = "<group>"; };
+		9D75851A26CA96730095BF3F /* lulu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lulu.png; sourceTree = "<group>"; };
 		A8A3FF529B3E4E59ADA9EB6A /* Pods_LeanSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeanSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4090FEDF49A5CFA6A7494B1 /* Pods-LeanSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-LeanSampleTests/Pods-LeanSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA4C8B8926BBA1E300FA8950 /* LeanSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +72,6 @@
 		CA4C8BB326BBA1ED00FA8950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA65418926BCF99100D0912A /* OnBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVC.swift; sourceTree = "<group>"; };
 		CA65418B26BCFD0700D0912A /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
-		CA77AAA726C0FB7400A164A4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		CA77AAA926C0FC1300A164A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D2FE3842BE12206DAAB64DFE /* Pods-LeanSample-LeanSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanSample-LeanSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-LeanSample-LeanSampleUITests/Pods-LeanSample-LeanSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4C8BC426BBFD2B00FA8950 /* LeanSDK in Frameworks */,
+				9D2D79EA26C6923B00B17DC1 /* LeanSDK.xcframework in Frameworks */,
 				AC7DBC2AFB0444B889ABD121 /* Pods_LeanSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +130,7 @@
 		CA4C8B8026BBA1E200FA8950 = {
 			isa = PBXGroup;
 			children = (
+				9D2D79E926C6923B00B17DC1 /* LeanSDK.xcframework */,
 				CA4C8B8B26BBA1E300FA8950 /* LeanSample */,
 				CA4C8BA526BBA1ED00FA8950 /* LeanSampleTests */,
 				CA4C8BB026BBA1ED00FA8950 /* LeanSampleUITests */,
@@ -147,9 +153,11 @@
 		CA4C8B8B26BBA1E300FA8950 /* LeanSample */ = {
 			isa = PBXGroup;
 			children = (
-				CA77AAAD26C0FE8C00A164A4 /* APIClient */,
+				9D75851426CA75F60095BF3F /* bg.json */,
 				CA77AAAB26C0FE7400A164A4 /* Class */,
 				CA4C8B8C26BBA1E300FA8950 /* AppDelegate.swift */,
+				9D75851826CA89520095BF3F /* Lean.png */,
+				9D75851A26CA96730095BF3F /* lulu.png */,
 				CA65418B26BCFD0700D0912A /* Extentions.swift */,
 				CA4C8B9226BBA1E300FA8950 /* Main.storyboard */,
 				CA4C8B9826BBA1EC00FA8950 /* Assets.xcassets */,
@@ -181,18 +189,10 @@
 		CA77AAAB26C0FE7400A164A4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9D75851626CA764F0095BF3F /* SplashVC.swift */,
 				CA65418926BCF99100D0912A /* OnBoardVC.swift */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		CA77AAAD26C0FE8C00A164A4 /* APIClient */ = {
-			isa = PBXGroup;
-			children = (
-				CA77AAA926C0FC1300A164A4 /* Constants.swift */,
-				CA77AAA726C0FB7400A164A4 /* APIClient.swift */,
-			);
-			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +214,6 @@
 			);
 			name = LeanSample;
 			packageProductDependencies = (
-				CA4C8BC326BBFD2B00FA8950 /* LeanSDK */,
 			);
 			productName = LeanSample;
 			productReference = CA4C8B8926BBA1E300FA8950 /* LeanSample.app */;
@@ -291,7 +290,6 @@
 			);
 			mainGroup = CA4C8B8026BBA1E200FA8950;
 			packageReferences = (
-				CA4C8BC226BBFD2B00FA8950 /* XCRemoteSwiftPackageReference "link-sdk-ios-distribution" */,
 			);
 			productRefGroup = CA4C8B8A26BBA1E300FA8950 /* Products */;
 			projectDirPath = "";
@@ -309,9 +307,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D75851526CA75F60095BF3F /* bg.json in Resources */,
+				9D75851926CA89530095BF3F /* Lean.png in Resources */,
 				CA4C8B9C26BBA1EC00FA8950 /* LaunchScreen.storyboard in Resources */,
 				CA4C8B9926BBA1EC00FA8950 /* Assets.xcassets in Resources */,
 				CA4C8B9426BBA1E300FA8950 /* Main.storyboard in Resources */,
+				9D75851B26CA96730095BF3F /* lulu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +443,8 @@
 				CA65418C26BCFD0700D0912A /* Extentions.swift in Sources */,
 				CA65418A26BCF99100D0912A /* OnBoardVC.swift in Sources */,
 				CA4C8B9726BBA1E300FA8950 /* LeanSample.xcdatamodeld in Sources */,
-				CA77AAA826C0FB7400A164A4 /* APIClient.swift in Sources */,
 				CA4C8B8D26BBA1E300FA8950 /* AppDelegate.swift in Sources */,
-				CA77AAAA26C0FC1300A164A4 /* Constants.swift in Sources */,
+				9D75851726CA764F0095BF3F /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,25 +783,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CA4C8BC226BBFD2B00FA8950 /* XCRemoteSwiftPackageReference "link-sdk-ios-distribution" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/leantechnologies/link-sdk-ios-distribution";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CA4C8BC326BBFD2B00FA8950 /* LeanSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA4C8BC226BBFD2B00FA8950 /* XCRemoteSwiftPackageReference "link-sdk-ios-distribution" */;
-			productName = LeanSDK;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CA4C8B9526BBA1E300FA8950 /* LeanSample.xcdatamodeld */ = {

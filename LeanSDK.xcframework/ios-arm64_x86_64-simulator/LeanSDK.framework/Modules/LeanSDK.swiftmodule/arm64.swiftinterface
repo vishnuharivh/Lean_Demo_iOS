@@ -1,0 +1,56 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios14.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LeanSDK
+import Foundation
+@_exported import LeanSDK
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+public struct LeanView : SwiftUI.UIViewRepresentable {
+  public func makeUIView(context: LeanSDK.LeanView.Context) -> WebKit.WKWebView
+  public func updateUIView(_ uiView: WebKit.WKWebView, context: LeanSDK.LeanView.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = WebKit.WKWebView
+}
+public enum LeanPermission : Swift.String {
+  case Identity
+  case Accounts
+  case Transactions
+  case Balance
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Lean {
+  public static let manager: LeanSDK.Lean
+  public var view: LeanSDK.LeanView
+  public func setup(appToken: Swift.String, sandbox: Swift.Bool, version: Swift.String)
+  public func link(customerId: Swift.String, permissions: [LeanSDK.LeanPermission], bankId: Swift.String?, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func link(presentingViewController: UIKit.UIViewController, customerId: Swift.String, permissions: [LeanSDK.LeanPermission], bankId: Swift.String?, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func reconnect(reconnectId: Swift.String, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func reconnect(presentingViewController: UIKit.UIViewController, reconnectId: Swift.String, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func createPaymentSource(customerId: Swift.String, bankId: Swift.String?, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func createPaymentSource(presentingViewController: UIKit.UIViewController, customerId: Swift.String, bankId: Swift.String?, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func updatePaymentSource(customerId: Swift.String, paymentSourceId: Swift.String, paymentDestinationId: Swift.String, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func updatePaymentSource(presentingViewController: UIKit.UIViewController, customerId: Swift.String, paymentSourceId: Swift.String, paymentDestinationId: Swift.String, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func pay(paymentIntentId: Swift.String, accountId: Swift.String?, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  public func pay(presentingViewController: UIKit.UIViewController, paymentIntentId: Swift.String, accountId: Swift.String?, success: @escaping () -> (), error: @escaping LeanSDK.LeanHandlers.errorClosureType)
+  @objc deinit
+}
+public struct LeanStatus {
+  public let status: Swift.String
+  public let message: Swift.String?
+  public let method: Swift.String
+  public let lastApiResponse: Swift.String?
+}
+public struct LeanHandlers {
+  public typealias genericClosureType = () -> ()
+  public typealias errorClosureType = (LeanSDK.LeanStatus) -> ()
+}
+extension LeanSDK.LeanPermission : Swift.Equatable {}
+extension LeanSDK.LeanPermission : Swift.Hashable {}
+extension LeanSDK.LeanPermission : Swift.RawRepresentable {}

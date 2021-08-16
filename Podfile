@@ -6,7 +6,8 @@ target 'LeanSample' do
   use_frameworks!
 
   # Pods for LeanSample
-pod 'Alamofire'
+pod 'lottie-ios'
+pod "AnimatedGradientView"
 
   target 'LeanSampleTests' do
     inherit! :search_paths
