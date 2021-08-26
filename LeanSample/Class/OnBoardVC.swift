@@ -22,15 +22,8 @@ class OnBoardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-       
-        
-     //   let animatedGradient = AnimatedGradientView(frame: view.bounds)
-        gradientView.direction = .up
-        gradientView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-        (colors: ["#003973", "#E5E5BE", "#fcb045"], .right, .axial)]
-       
+       Styling()
     // Lean SDK intialization
-        
         Lean.manager.setup(appToken: "da9b810f-338a-41ae-ac80-445478e6158a", sandbox: true, version: "1.11.1")
        
     }
@@ -41,11 +34,7 @@ class OnBoardVC: UIViewController {
     @IBAction func createPayment(_ sender: UIButton) {
         
         if customerIDTxField.text?.count == 0 {
-            let alert = UIAlertController(title: "Error!!", message: "Please enter a valid customer id", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-               
-            }))
-            self.present(alert, animated: true, completion: nil)
+            alert(title: "Error!!", message: "Please enter a valid customer id")
         } else {
             Lean.manager.createPaymentSource(
                 presentingViewController: self,
@@ -70,11 +59,7 @@ class OnBoardVC: UIViewController {
     
     @IBAction func Pay(_ sender: UIButton) {
         if paymentIntentIDTxField.text?.count == 0 {
-            let alert = UIAlertController(title: "Error!!", message: "Please enter a valid payment intent id", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-               
-            }))
-            self.present(alert, animated: true, completion: nil)
+            alert(title: "Error!!", message: "Please enter a valid payment intent id")
         } else {
             Lean.manager.pay(
                 presentingViewController: self,
@@ -93,18 +78,35 @@ class OnBoardVC: UIViewController {
    
     @IBAction func customer_info(_ sender: Any) {
         
-        let alert = UIAlertController(title: "INFO", message: "Generate a customer id using \"Create Customer\"  API" , preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-           
-        }))
-        self.present(alert, animated: true, completion: nil)
+        alert(title: "INFO", message: "Generate a customer id using \"Create Customer\"  API")
     }
     @IBAction func payment_info(_ sender: Any) {
         
-        let alert = UIAlertController(title: "INFO", message: "Generate a payment intent id using \"Create Payment Intent\"  API", preferredStyle: .alert)
+        alert(title: "INFO", message: "Generate a payment intent id using \"Create Payment Intent\"  API")
+    }
+    
+    
+    
+    
+    func alert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
            
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
+    func Styling(){
+        gradientView.direction = .up
+        gradientView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
+        (colors: ["#003973", "#E5E5BE", "#fcb045"], .right, .axial)]
+       
+    }
+    
+    
 }
+
+
+
+
