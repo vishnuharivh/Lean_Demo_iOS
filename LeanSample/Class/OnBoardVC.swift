@@ -14,7 +14,7 @@ class OnBoardVC: UIViewController {
     @IBOutlet weak var paymentIntentIDTxField: UITextField!
     @IBOutlet weak var gradientView: AnimatedGradientView!
     
-    
+    @IBOutlet weak var bottomView: UIView!
     var linkPermissions = [LeanPermission.Identity, LeanPermission.Accounts,
                            LeanPermission.Transactions, LeanPermission.Balance]
 
@@ -22,6 +22,8 @@ class OnBoardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+       
+        
      //   let animatedGradient = AnimatedGradientView(frame: view.bounds)
         gradientView.direction = .up
         gradientView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
@@ -89,4 +91,20 @@ class OnBoardVC: UIViewController {
             }
         }
    
+    @IBAction func customer_info(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "INFO", message: "Generate a customer id using \"Create Customer\"  API" , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+           
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    @IBAction func payment_info(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "INFO", message: "Generate a payment intent id using \"Create Payment Intent\"  API", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+           
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
