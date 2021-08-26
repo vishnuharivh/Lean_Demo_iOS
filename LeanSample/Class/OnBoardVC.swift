@@ -10,7 +10,11 @@ import LeanSDK
 import AnimatedGradientView
 
 class OnBoardVC: UIViewController {
+    @IBOutlet weak var customerIDTxField: UITextField!
+    @IBOutlet weak var paymentIntentIDTxField: UITextField!
     @IBOutlet weak var gradientView: AnimatedGradientView!
+    
+    
     var linkPermissions = [LeanPermission.Identity, LeanPermission.Accounts,
                            LeanPermission.Transactions, LeanPermission.Balance]
 
@@ -21,9 +25,7 @@ class OnBoardVC: UIViewController {
      //   let animatedGradient = AnimatedGradientView(frame: view.bounds)
         gradientView.direction = .up
         gradientView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-        (colors: ["#833ab4", "#f09090", "#fcb045"], .right, .axial),
-        (colors: ["#003973", "#E5E5BE"], .down, .axial),
-        (colors: ["#a9e39a", "#FFF200", "#ed9a9a"], .left, .axial)]
+        (colors: ["#003973", "#E5E5BE", "#fcb045"], .right, .axial)]
        
     // Lean SDK intialization
         
@@ -35,18 +37,27 @@ class OnBoardVC: UIViewController {
     // Create Payment method
     
     @IBAction func createPayment(_ sender: UIButton) {
-        Lean.manager.createPaymentSource(
-            presentingViewController: self,
-            customerId: "f69673be-1894-43a5-adb2-85406d10f444",
-            bankId: nil,
-            success: {
-                print("Create Lean Success")
-                 },
-            error: { (status) in
-                
-                print("Create Lean Failed \(status)")
-            }
-        )
+        
+        if customerIDTxField.text?.count == 0 {
+            let alert = UIAlertController(title: "Error!!", message: "Please enter a valid customer id", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+               
+            }))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            Lean.manager.createPaymentSource(
+                presentingViewController: self,
+                customerId: customerIDTxField.text!,
+                bankId: nil,
+                success: {
+                    print("Create Lean Success")
+                     },
+                error: { (status) in
+                    
+                    print("Create Lean Failed \(status)")
+                }
+            )
+        }
     }
     
     
@@ -56,18 +67,26 @@ class OnBoardVC: UIViewController {
     //  Payment method
     
     @IBAction func Pay(_ sender: UIButton) {
-    
-    Lean.manager.pay(
-        presentingViewController: self,
-        paymentIntentId: "20c32a49-789c-473e-a379-bae7cbbe42dd",
-        accountId: nil,
-        success: {
-            print("Lean Pay Success")
-        },
-        error: { (status) in
-            print("Lean Pay Failed \(status)")
+        if paymentIntentIDTxField.text?.count == 0 {
+            let alert = UIAlertController(title: "Error!!", message: "Please enter a valid payment intent id", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+               
+            }))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            Lean.manager.pay(
+                presentingViewController: self,
+                paymentIntentId: paymentIntentIDTxField.text!,
+                accountId: nil,
+                success: {
+                    print("Lean Pay Success")
+                },
+                error: { (status) in
+                    print("Lean Pay Failed \(status)")
+                }
+            )
+            
+            }
         }
-    )
-    
-    }
+   
 }

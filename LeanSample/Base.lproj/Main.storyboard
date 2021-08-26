@@ -103,8 +103,25 @@ Money</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter payment Intent Id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqD-qh-tCd">
+                                <rect key="frame" x="50" y="431" width="314" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xt-h5-GR3">
-                                <rect key="frame" x="107" y="378" width="200" height="64"/>
+                                <rect key="frame" x="107" y="531" width="200" height="64"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                 <state key="normal" title="PAY">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,8 +150,28 @@ Money</string>
                                     <action selector="Pay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pw0-yT-WJC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter customer id" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDO-ID-EUx">
+                                <rect key="frame" x="50" y="197" width="314" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Nw1-JU-VJF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQd-H8-5l4">
-                                <rect key="frame" x="107" y="214" width="200" height="64"/>
+                                <rect key="frame" x="107" y="297" width="200" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ThF-s5-slf"/>
                                     <constraint firstAttribute="height" constant="64" id="d5D-uv-41g"/>
@@ -173,18 +210,28 @@ Money</string>
                         <constraints>
                             <constraint firstItem="1Xt-h5-GR3" firstAttribute="width" secondItem="UQd-H8-5l4" secondAttribute="width" id="1Ok-mh-GCK"/>
                             <constraint firstItem="1Xt-h5-GR3" firstAttribute="height" secondItem="UQd-H8-5l4" secondAttribute="height" id="1wg-eR-3L6"/>
+                            <constraint firstItem="aqD-qh-tCd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2MW-lt-WzQ"/>
+                            <constraint firstItem="UQd-H8-5l4" firstAttribute="top" secondItem="zDO-ID-EUx" secondAttribute="bottom" constant="40" id="2XQ-KB-tr6"/>
                             <constraint firstAttribute="bottom" secondItem="PYf-uu-wf1" secondAttribute="bottom" id="5Mu-8X-anz"/>
                             <constraint firstItem="1Xt-h5-GR3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="66w-sK-9QH"/>
                             <constraint firstItem="PYf-uu-wf1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H4Q-4m-Bob"/>
+                            <constraint firstItem="aqD-qh-tCd" firstAttribute="height" secondItem="zDO-ID-EUx" secondAttribute="height" id="IKl-Gs-gGc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PYf-uu-wf1" secondAttribute="trailing" id="IvU-vc-7VG"/>
+                            <constraint firstItem="aqD-qh-tCd" firstAttribute="width" secondItem="zDO-ID-EUx" secondAttribute="width" id="KD0-x1-I9a"/>
+                            <constraint firstItem="zDO-ID-EUx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="153" id="Zeb-A6-2Zh"/>
                             <constraint firstItem="UQd-H8-5l4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fDv-H9-WeW"/>
-                            <constraint firstItem="UQd-H8-5l4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="gg9-WZ-hYC"/>
+                            <constraint firstItem="zDO-ID-EUx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fma-B4-IEm"/>
                             <constraint firstItem="PYf-uu-wf1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ha3-K7-olf"/>
-                            <constraint firstItem="1Xt-h5-GR3" firstAttribute="top" secondItem="UQd-H8-5l4" secondAttribute="bottom" constant="100" id="zdd-Tl-zp8"/>
+                            <constraint firstItem="aqD-qh-tCd" firstAttribute="top" secondItem="UQd-H8-5l4" secondAttribute="bottom" constant="70" id="i30-xM-K5i"/>
+                            <constraint firstItem="1Xt-h5-GR3" firstAttribute="top" secondItem="aqD-qh-tCd" secondAttribute="bottom" constant="40" id="qyd-F6-EXb"/>
+                            <constraint firstItem="zDO-ID-EUx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="rup-fO-tn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zDO-ID-EUx" secondAttribute="trailing" constant="50" id="zee-bq-yzi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="customerIDTxField" destination="zDO-ID-EUx" id="UUW-9o-8cJ"/>
                         <outlet property="gradientView" destination="PYf-uu-wf1" id="gN7-mN-hiZ"/>
+                        <outlet property="paymentIntentIDTxField" destination="aqD-qh-tCd" id="2tu-sX-XNG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
