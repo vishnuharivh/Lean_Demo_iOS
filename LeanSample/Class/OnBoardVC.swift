@@ -17,22 +17,15 @@ class OnBoardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
+       
      //   let animatedGradient = AnimatedGradientView(frame: view.bounds)
         gradientView.direction = .up
         gradientView.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
         (colors: ["#833ab4", "#f09090", "#fcb045"], .right, .axial),
         (colors: ["#003973", "#E5E5BE"], .down, .axial),
         (colors: ["#a9e39a", "#FFF200", "#ed9a9a"], .left, .axial)]
-        
-        
-        
-        
-        // Lean SDK intialization
+       
+    // Lean SDK intialization
         
         Lean.manager.setup(appToken: "da9b810f-338a-41ae-ac80-445478e6158a", sandbox: true, version: "1.11.1")
        
@@ -44,7 +37,7 @@ class OnBoardVC: UIViewController {
     @IBAction func createPayment(_ sender: UIButton) {
         Lean.manager.createPaymentSource(
             presentingViewController: self,
-            customerId: "67694984-6b1a-412f-8523-1e54cc2cba78",
+            customerId: "f69673be-1894-43a5-adb2-85406d10f444",
             bankId: nil,
             success: {
                 print("Create Lean Success")
@@ -66,7 +59,7 @@ class OnBoardVC: UIViewController {
     
     Lean.manager.pay(
         presentingViewController: self,
-        paymentIntentId: "de697917-ec79-4ba3-af10-17ffa2283e83",
+        paymentIntentId: "20c32a49-789c-473e-a379-bae7cbbe42dd",
         accountId: nil,
         success: {
             print("Lean Pay Success")

@@ -16,10 +16,10 @@ class SplashVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
          animationView.contentMode = .scaleAspectFit
          animationView.loopMode = .loop
-         animationView.animationSpeed = 0.5
+        animationView.animationSpeed = 1.0
          animationView.play()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "OnBoardVC") as? OnBoardVC
             self.navigationController?.pushViewController(vc!, animated: true)
         }
