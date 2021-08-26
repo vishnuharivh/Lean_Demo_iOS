@@ -19,7 +19,7 @@ class SplashVC: UIViewController {
         animationView.animationSpeed = 1.0
          animationView.play()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "OnBoardVC") as? OnBoardVC
             self.navigationController?.pushViewController(vc!, animated: true)
         }
